@@ -7,13 +7,5 @@ The customer section allows customers to create and manage their accounts, view 
  The product section showcases individual products with detailed information such as size, materials, colors, price, and availability. The order section enables customers to add products to their shopping carts, review orders, and complete the checkout process. The comment section allows customers to leave feedback on products.
 The presentation logic layer of the web application includes several pages such as the home page, registration page, login page, forgot password page, product page, messages page, shopping cart page, and checkout pages (customer info, shipping, payment, success). These pages provide users with interfaces to browse products, register and log in to their accounts, reset passwords, view and purchase products, communicate with sellers, manage shopping carts, and complete the ordering process.
 Overall, the project aims to create a comprehensive online platform for the carpet industry, connecting producers and customers, providing product showcases, facilitating order management, and offering a seamless shopping experience.
-First name	Surname	ID
-Aynur Cemre	Aka	2071493
-Shahla	Sadeghzadehdarandash	2071540
-Shayan	Sharifi	2073043
-Elham	Norouzimehmandoustolia	2052056
-Mohammad	Mohammadi	2041467
-Claudio	Ianniello	2096140
-Mohammad	Vanai	2080626
 
 
