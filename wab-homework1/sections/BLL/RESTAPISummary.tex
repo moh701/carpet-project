@@ -1,0 +1,31 @@
+\subsection{REST API Summary}
+
+%describe the REST API. If needed, add a few lines of text here, describing the content of the table.
+
+\begin{longtable}{|p{.375\columnwidth}|p{.1\columnwidth} |p{.35\columnwidth}|p{.1\columnwidth}|} 
+\hline
+\textbf{URI} & \textbf{Method} & \textbf{Description} & \textbf{Filter} \\\hline
+\texttt{/customers/login/} & GET &  it is used for login & \\\hline
+\texttt{/customers/list/} & GET &  it is used for showing list of customers & Admin\\\hline
+\texttt{/customers/register/} & Post &  it is used for registering customers &\\\hline
+\texttt{/customers/edit/} & Post &  it is used for editing the customer's information & Customer\\\hline
+\texttt{/customers/delete/} & Delete &  it is used for deleting a customer & Admin\\\hline
+\texttt{/producers/list/} & GET &  it is used for showing list of Producers & Admin\\\hline
+\texttt{/producers/login/} & Post &  it is used for  Producers to login & \\\hline
+\texttt{/producers/update/} & Post &  it is used for updating  Producer's data & Producer\\\hline
+\texttt{/producers/delete/} & Delete &  it is used for deleting  Producer's data & Admin\\\hline
+\texttt{/producers/register/} & Post &  it is used for registering new  Producer & \\\hline
+\texttt{/product/rate/get/} & GET &  it is used for getting product rate & \\\hline
+\texttt{/product/rate/post/} & POST &  it is used for registering a rate for a product & Customer\\\hline
+\texttt{/view/product-id/} & GET &  it is used for showing a product page & \\\hline
+\texttt{/view/all/producer-id/} & GET &  it is used for showing all products of a producer & \\\hline
+\texttt{/view/search/} & GET &  it is used for searching products based on some inputs & \\\hline
+\texttt{/product/bargain/get/} & GET &  it is used for getting bargain history between a customer and a producer & \\\hline
+\texttt{/product/bargain/post/} & POST &  it is used for registering a new offer for a product & \\\hline
+\texttt{/chat/get/} & GET &  it is used for getting chat history between a customer and a producer & \\\hline
+\texttt{/chat/insert/} & POST &  it is used for insert a new message in a chat & \\\hline
+\texttt{/invoice/get/} & GET &  it is used for getting invoice information of a purchase & Customer\\\hline
+\texttt{/invoice/insert/} & POST &  it is used for registering a new invoice in database & \\\hline
+\caption{Describe in this table your REST API}
+\label{tab:termGlossary}
+\end{longtable}

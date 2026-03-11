@@ -1,0 +1,37 @@
+\subsection{REST API Details}
+
+We report here two different resource types that our web application handles during its functioning.
+
+\subsubsection*{Customer Registration}
+
+The following endpoint allows a user to register to this Carpet Store as a customer.
+
+
+\begin{itemize}
+    \item URL: \\\texttt{customers/register/}
+    \item Method: \\\texttt{POST}
+    \item URL Parameters: \\None
+    \item Data Parameters: \\\texttt{name = 'string'\\surname = 'string'\\email = 'string'\\password = 'string'\\mobile number = 'string'}
+    \item Success Response: \\\textbf{Code} : 200\\\textbf{Content} : Customer is successfully registered and user will be redirected to a 'dashboard' page.
+    \item Error Response: \\\textbf{Code} : \texttt{ 500 INTERNAL\_SERVER\_ERROR}\\\textbf{Content} : ”error”:\{”code”:-999, ”message”:”Invalid email or password”\}\\\textbf{when} : When email or password is invalid.
+
+\end{itemize}
+
+
+\subsubsection*{Products list of a producer}
+
+This endpoint shows all products of a producer.
+
+
+
+
+\begin{itemize}
+    \item URL: \\\texttt{/view/all/producer\_id}
+    \item Method: \\\texttt{GET}
+    \item URL Parameters: \\None
+    \item Data Parameters: \\\texttt{producer id = 'int'}
+    \item Success Response: \\\textbf{Code} : 200\\\textbf{Content} : Request is handled successfully and user is redirected to a page that shows ll the related products.
+    \item Error Response: \\\textbf{Code} : \texttt{400 BAD\_REQUEST}\\\textbf{Content} : \{”error”:{”code”:-102, ”message”:”One or more input fields are empty.”\}\\\textbf{when} : When some mandatory fields are empty.
+    \\\textbf{Code} : \texttt{ 500 INTERNAL\_SERVER\_ERROR}\\\textbf{Content} : \{”error”:\{”code”:-999, ”message”:”Internal Error.”\}\\\textbf{when} : if there is an SQLException or a NamingException, this error is returned.
+
+\end{itemize}

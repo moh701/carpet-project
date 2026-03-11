@@ -1,0 +1,233 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: shili
+  Date: 6/3/23
+  Time: 5:51 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+          crossorigin="anonymous">
+</head>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../../HTMLfrontend/index.html"><img src="../../HTMLfrontend/images/OCS.svg" style="max-height: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Index/Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/cart.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/checkout-customerInfo.html">customerInfo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/checkout-payment.html">checkout-payment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/checkout-shipping.html">checkout-shipping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/checkout-success.html">checkout-success</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/forgetPassword.html">forget Password</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/login.html">Login Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/messages.html">Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/prducerPage.html">producer Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/productPage.html">Product Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../HTMLfrontend/register.html">Register Page</a>
+                </li>
+            </ul>
+            <div class="d-flex" role="search">
+                <a href="">
+                    <svg style="color: black" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                         fill="currentColor"
+                         class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                    </svg>
+                </a>
+                <div class="p-2"></div>
+                <a href="">
+
+                    <svg style="color: black" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                         fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        -->
+
+        </div>
+    </div>
+</nav>
+<style>
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>
+
+
+<body class="bg-body-tertiary">
+<div class="container pt-4">
+    <main>
+        <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-primary">Your cart</span>
+                    <span class="badge bg-primary rounded-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Product name</h6>
+                            <small class="text-body-secondary">Brief description</small>
+                        </div>
+                        <span class="text-body-secondary">$12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Second product</h6>
+                            <small class="text-body-secondary">Brief description</small>
+                        </div>
+                        <span class="text-body-secondary">$8</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Third item</h6>
+                            <small class="text-body-secondary">Brief description</small>
+                        </div>
+                        <span class="text-body-secondary">$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                        <div class="text-success">
+                            <h6 class="my-0">Promo code</h6>
+                            <small>EXAMPLECODE</small>
+                        </div>
+                        <span class="text-success">−$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong>$20</strong>
+                    </li>
+                </ul>
+
+                <form class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Promo code">
+                        <button type="submit" class="btn btn-secondary">Redeem</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Payment</h4>
+                <form class="needs-validation" novalidate>
+                    <div class="my-3">
+                        <div class="form-check">
+                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
+                                   required>
+                            <label class="form-check-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
+                    </div>
+
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                            <label for="cc-name" class="form-label">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <small class="text-body-secondary">Full name as displayed on card</small>
+                            <div class="invalid-feedback">
+                                Name on card is required
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="cc-number" class="form-label">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Credit card number is required
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-expiration" class="form-label">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Expiration date required
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Security code required
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="d-flex justify-content-center">
+                        <form action="<c:url value="/cart/checkoutSuccess/"/>" method="POST">
+                            <button class="btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                        </form>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="../../HTMLfrontend/js/bootstrap.bundle.min.js"></script>
+<script src="../../HTMLfrontend/js/myJS/checkout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
